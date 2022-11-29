@@ -4,3 +4,6 @@
 [submodule "lib/external/glad"]
 	path = lib/external/glad
 	url = git@github.com:Dav1dde/glad.git
+[submodule "lib/external/glm"]
+	path = lib/external/glm
+	url = git@github.com:g-truc/glm.git

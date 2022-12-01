@@ -1,17 +1,28 @@
 cmake_minimum_required(VERSION 3.25.0)
 project(OpenglTut VERSION 0.1.0)
 
-# include(CTest)
-# enable_testing()
+# add_subdirectory(lib/external)
 
-# Turn off GLFW Options
-# option(GLFW_BUILD_DOCS OFF)
-# option(GLFW_BUILD_EXAMPLES OFF)
-# option(GLFW_BUILD_TESTS OFF)
-# add_subdirectory("lib/external/glfw")
+# Add glfw stuff
+option(GLFW_BUILD_DOCS OFF)
+option(GLFW_BUILD_EXAMPLES OFF)
+option(GLFW_BUILD_TESTS OFF)
+add_subdirectory(lib/external/glfw)
 
 
+add_subdirectory(src)
 add_executable(${PROJECT_NAME}_exe src/main.cpp)
+
+
+
+
+
+
+
+
+
+
+
 
 # Add subdirectories
 # add_subdirectory("lib/external/glad")
@@ -24,6 +35,10 @@ add_executable(${PROJECT_NAME}_exe src/main.cpp)
 # foreach (sub "src" "${GLFW_DIR}" "${GLAD_DIR}" "src/RenderEngine")
 #     add_subdirectory("${sub}")
 # endforeach ()
+
+
+# include(CTest)
+# enable_testing()
 
 # set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 # set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

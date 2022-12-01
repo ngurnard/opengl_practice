@@ -5,3 +5,6 @@
 #     glfw
 #     glad
 # )
+
+add_subdirectory(RenderEngine)
+target_link_libraries($${PROJECT_NAME} displayManager)

@@ -1,10 +1,25 @@
-# add_executable(${PROJECT_NAME} main.cpp)
+set(target ${PROJECT_NAME})
 
-# Get these files
-# target_link_libraries(${PROJECT_NAME} PUBLIC
-#     glfw
-#     glad
-# )
+add_executable(${target})
+
+target_sources(
+    ${target}
+
+    PRIVATE
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+)
 
 add_subdirectory(RenderEngine)
-target_link_libraries($${PROJECT_NAME} displayManager)
+add_subdirectory(Engine)
+message("HEELO")
+target_include_directories(
+    ${target}
+
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_link_libraries(${target} PRIVATE gameManager glfw)
+
+# target_link_libraries($${PROJECT_NAME} displayManager)

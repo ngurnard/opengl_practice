@@ -1,38 +1,26 @@
 cmake_minimum_required(VERSION 3.25.0)
 project(OpenglTut VERSION 0.1.0)
 
+
 # add_subdirectory(lib/external)
 
+# Run: git submodule update --init --recursive
+# if having submodule trouble
+
 # Add glfw stuff
+add_subdirectory(lib/external/glfw)
 option(GLFW_BUILD_DOCS OFF)
 option(GLFW_BUILD_EXAMPLES OFF)
 option(GLFW_BUILD_TESTS OFF)
-add_subdirectory(lib/external/glfw)
 
+# message("I am here top")
+
+# target_link_libraries(${PROJECT_NAME}_exe gameManager displayManager)
 
 add_subdirectory(src)
-add_executable(${PROJECT_NAME}_exe src/main.cpp)
-
-
-
-
-
-
-
-
-
-
-
-
-# Add subdirectories
-# add_subdirectory("lib/external/glad")
-# add_subdirectory("src/RenderEngine")
-# add_subdirectory("src/Engine")
-# add_subdirectory("${GLFW_DIR}")
-# add_subdirectory("${GLAD_DIR}")
 
 # For loop add subdirectories
-# foreach (sub "src" "${GLFW_DIR}" "${GLAD_DIR}" "src/RenderEngine")
+# foreach (sub "src" "${GLFW_DIR}" "${GLAD_DIR}" "sr≠c/RenderEngine")
 #     add_subdirectory("${sub}")
 # endforeach ()
 

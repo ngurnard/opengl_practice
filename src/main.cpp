@@ -3,6 +3,7 @@
 // #include "GLFW/glfw3.h"
 // #include "Engine/GameManager.h"
 // #include "gameManager/gameManager.h"
+#include "Engine/gameManager.h"
 
 int main(int, char**) {
     std::cout << "Hello, world! Am I finally working?\n";

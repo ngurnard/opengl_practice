@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+// #include <glad/glad.h>
+#include "../../lib/external/glfw/include/GLFW/glfw3.h"
 
 class DisplayManager {
 public:
